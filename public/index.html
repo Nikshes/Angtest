@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Тестовое задание</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+        .api li {
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            color: #333;
+            display: block;
+            font-size: 13px;
+            line-height: 1.42857;
+            margin: 0 0 10px;
+            overflow-wrap: break-word;
+            padding: 9px;
+            word-break: break-all;
+        }
+        .api li p {
+            padding: 10px;
+            border: 1px dotted #999;
+        }
+        .note {
+            background-color: #e5e5e5;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 9px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+<div class="container" style="padding-bottom: 70px;">
+    <h2>Требования к задаче: (желательно)</h2>
+    <div>
+        <ul>
+            <li>Angular 1.4.9+</li>
+        </ul>
+    </div>
+
+    <h2>Требования к браузерам:</h2>
+    <div>
+        <ul>
+            <li>MS Internet Explorer 10+</li>
+            <li>Google Chrome 35+</li>
+            <li>Mozilla Firefox 30+</li>
+            <li>Opera 20+</li>
+            <li>Safari 8+</li>
+        </ul>
+    </div>
+
+    <h2>Описание задачи:</h2>
+    <div>
+        <p>Необходимо разработать Angular приложение, в котором будет возможность: </p>
+        <ol>
+            <li>авторизоваться через API</li>
+            <li>изменить имя в профиле</li>
+            <li>просмотреть список заказов</li>
+        </ol>
+        <p class="note">Прежде чем обращаться на API получения/изменения профиля и получение списка заказов необходимо авторизоваться</p>
+
+        <h2>API:</h2>
+        <ul class="api">
+            <li>
+                /api/user/login
+                <p>
+                    POST-параметры:<br/>
+                    <i>email</i> - емейл пользователя<br/>
+                    <i>password</i> - пароль
+                </p>
+            </li>
+            <li>
+                /api/user/logout
+            </li>
+            <li>
+                /api/user/profile
+            </li>
+            <li>
+                /api/user/profile/edit
+                <p>
+                    POST-параметры:<br/>
+                    <i>name</i> - имя пользователя
+                </p>
+            </li>
+            <li>/api/orders</li>
+        </ul>
+    </div>
+
+    <div>
+        <p>Формат успешного ответа API:</p>
+        <pre>
+            {
+                "success": true,
+                "data": DataObject
+            }
+        </pre>
+    </div>
+
+    <div>
+        <p>Формат неуспешного ответа API:</p>
+        <pre>
+            {
+                "success": false,
+                "error": ErrorMessageString
+            }
+        </pre>
+    </div>
+
+    <h2>Тестовые учетки:</h2>
+    <div>
+    <ul class="api">
+        <li>
+            <p>Логин: <b>test@mail.test</b></p>
+            <p>Пароль: <b>nNkZT.wNmrx16</b></p>
+        </li>
+        <li>
+            <p>Логин: <b>test2@mail.test</b></p>
+            <p>Пароль: <b>000000</b></p>
+        </li>
+        <li>
+            <p>Логин: <b>test3@mail.test</b></p>
+            <p>Пароль: <b>000000</b></p>
+        </li>
+    </ul>
+
+    </div>
+    <h2>Файлы шаблонов:</h2>
+    <p><a href="//test.kluatr.ru/Test_ang_templates.zip">Test_ang_templates.zip</a></p>
+
+</div>
+</body>
+</html>
